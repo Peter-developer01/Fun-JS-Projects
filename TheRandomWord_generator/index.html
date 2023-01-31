@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The RANDOM word Generator</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<form>
+		<label>Каждая первая буква будет из этого списка:
+			<input type="text" id="first"
+				value="бвгджзклмнпрстфхцчшщбвгджзклмнпрстфхцчшщбвгджзклмнпрстфхцчшщбвгджзклмнпрстфхцчшщ"
+				placeholder="Любые буквы"> <!-- bcdfghjklmnpqrstvwxz -->
+		</label>
+		<br>
+		<label>Каждая вторая буква будет из этого списка:
+			<input type="text" id="second"
+				value="аеиоуэюяаеиоуэюяаеиоуэюяаеиоуэюяаеиоуэюяаеиоуэюяаеиоуэюяаеиоуэюяаеиоуэюяаеиоуэюя"
+				placeholder="Любые буквы"> <!-- aeiouy -->
+		</label>
+		<br>
+		<br>
+		<label>Количество сгенерированных слов: --> <input type="range" min="1" max="100" id="word-count"
+				style="width: 700px;" value="22"> —
+			равно
+			<span id="word-count-show">22</span></label>
+		<br>
+		<label>​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ | Разделитель: <input type="text" id="separator" value=" – "
+				placeholder="Введите разделитель"></label>
+		<br>
+		<label>Количество букв в сгенерированном слове: --> <input type="range" id="word-length" min="2" max="30"
+				style="width: 400px;" value="5"> — равно <span id="word-length-show">5</span></label>
+		<br>
+		<label><input type="radio" name="lets" id="as-well"> Как обычно</label>
+		<br>
+		<label><input type="radio" name="lets" id="all-words-in-upperfirlet" checked> Каждое Слово С Большой
+			Буквы</label>
+		<br>
+		<label><input type="radio" name="lets" id="sentence-in-upperfirlet"> Каждое предложение с большой буквы</label>
+		<br>
+		<button id="generate"># СГЕНЕРИРОВАТЬ #</button> <!-- disabled -->
+		<br>
+		<button id="generate-and-speak"># СГЕНЕРИРОВАТЬ и СКАЗАТЬ #</button>
+	</form>
+
+
+	<br>
+
+	<div id="results">
+		<pre style="display:inline-block"><span id="result">Ничего</span></pre>
+		<button disabled id="copy-result">Скопировать</button>
+		<button disabled id="speak-result">Сказать!</button>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
